@@ -1,0 +1,194 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/base.css' %}">
+{% endblock styles%}
+
+{% block content%}
+<div class="categories-and-main-post">
+    <div class="categories">
+        <div class="category">
+            <a href="#">
+                <img src="{% static 'Store/img/wallpaper_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Обои
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/illumination_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Освещение
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/plumbing_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Сантехника
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/instruments_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Инструменты
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/floor_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Напольные покрытия
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/building_materials_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Стройматериалы
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/colors_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Краски
+                </span>
+            </a>
+            <a href="#">
+                <img src="{% static 'Store/img/windows_and_doors_category.jpg' %}" alt="">
+                <span class="category-name">
+                    Окна и двери
+                </span>
+            </a>
+            <a href="" class="all_categories">
+                <img src="{% static 'Store/img/all_categories.png' %}" alt="">
+                <span>Все категории</span>
+            </a>
+        </div>
+    </div>
+    <div class="banner-desktop">
+        <img src="{% static 'Store/img/banner_desktop.webp' %}">
+        <div class="banner-desktop-title-subtitle-button">
+            <div class="banner-desktop-title-subtitle">
+                <div class="banner-desktop-title">
+                    Выгодно сегодня
+                </div>
+                <div class="banner-desktop-subtitle">
+                    Сезонные скидки, раcпродажи, ликвидация остатков!
+                    Все товары <br>с сезонными скидками:
+                </div>
+            </div>
+            <div class="banner-desktop-button">
+                <a href="">
+                    Все товары
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="special-line">
+    <div class="special-line-main-image">
+        <a href="">
+            <img src="{% static 'Store/img/plumbing_special_main.webp' %}" alt="">
+            <div class="special-line-main-image-caption">Посмотреть все</div>
+        </a>
+    </div>
+
+    <div class="special-line-card-and-hidden">
+        <div class="special-line-card">
+            <a href="">
+                <img src="{% static 'Store/img/plumbing_special_card_1.webp' %}" class="special-line-card-image" alt="">
+                <div class="special-line-card-title">
+                    Однорычажный смеситель для раковины
+                </div>
+                <div class="special-line-card-price">
+                    3479 руб
+                </div>
+                <div class="hidden-block">
+                    <a href="">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="special-line-card-and-hidden">
+        <div class="special-line-card">
+            <a href="">
+                <img src="{% static 'Store/img/plumbing_special_card_2.webp' %}" class="special-line-card-image" alt="">
+                <div class="special-line-card-title">
+                    Смеситель для раковины/умывальника
+                </div>
+                <div class="special-line-card-price">
+                    8270 руб
+                </div>
+                <div class="hidden-block">
+                    <a href="">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="special-line-card-and-hidden">
+        <div class="special-line-card">
+            <a href="">
+                <img src="{% static 'Store/img/plumbing_special_card_3.webp' %}" class="special-line-card-image" alt="">
+                <div class="special-line-card-title">
+                    Смеситель для кухни с гибким изливом
+                </div>
+                <div class="special-line-card-price">
+                    12001 руб
+                </div>
+                <div class="hidden-block">
+                    <a href="">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="special-line-card-and-hidden">
+        <div class="special-line-card">
+            <a href="">
+                <img src="{% static 'Store/img/plumbing_special_card_4.webp' %}" class="special-line-card-image" alt="">
+                <div class="special-line-card-title">
+                    Смеситель для ванны с душем
+                </div>
+                <div class="special-line-card-price">
+                    3650 руб
+                </div>
+                <div class="hidden-block">
+                    <a href="">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
