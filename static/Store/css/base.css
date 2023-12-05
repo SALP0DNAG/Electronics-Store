@@ -1,11 +1,18 @@
 @import url("fonts/stylesheet.css");
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
 	font-size: 14px;
 	color: #333333;
 	font-family: 'PT Root UI', sans-serif;
 	font-weight: bold;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -139,10 +146,17 @@ a {
 	padding-bottom: 15px;
 }
 
+.lower-nav-bar a {
+    color: black;
+}
+
 .additional_information {
 	display: flex;
 	justify-content: space-between;
 	gap: 17px;
+}
+.additional_information a{
+    color: black;
 }
 
 .nav-bar {
@@ -208,4 +222,8 @@ footer {
 	font-weight: normal;
 	color: white;
 	font-size: 18px;
+}
+
+main {
+    flex-grow: 1;
 }

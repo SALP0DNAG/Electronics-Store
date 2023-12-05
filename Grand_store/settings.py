@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'Store.apps.StoreConfig'
+    'Store.apps.StoreConfig',
+    'page.apps.PageConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'Grand_store.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'grand_store',
+        'USER': 'postgres',
+        'PASSWORD': ',fhcfxtvgbr123',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
@@ -124,3 +129,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

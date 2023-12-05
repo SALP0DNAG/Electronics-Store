@@ -1,0 +1,20 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'page/css/payment.css' %}">
+{% endblock styles %}
+
+{% block title %}
+    Оплата
+{% endblock title%}
+
+{% block content %}
+    <h1>Оплата</h1>
+    <p>Вы можете оплатить заказ:</p>
+    <ul>
+        <ol>1. Наличными курьеру или в пункте выдачи при получении заказа</ol>
+        <ol>2. Банковской картой Visa, Mastercard или МИР через сайт при оформлении заказа</ol>
+        <ol>3. Наложенным платежом при заказе с доставкой Почтой России</ol>
+    </ul>
+{% endblock content %}
