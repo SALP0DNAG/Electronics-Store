@@ -1,0 +1,18 @@
+[
+  {
+    "model": "Store.specialproducts",
+    "pk": 1,
+    "fields": {
+      "category": 3,
+      "image": "special_products_images/plumbing_special_main.webp"
+    }
+  },
+  {
+    "model": "Store.specialproducts",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "image": "special_products_images/wallpaper_special_odZgI0n.webp"
+    }
+  }
+]
