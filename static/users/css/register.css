@@ -1,0 +1,56 @@
+.register-title {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.register input {
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 50%;
+    margin-top: 5px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+.register input:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+.register-name {
+    margin-top: 15px;
+}
+
+.register span {
+    color: red;
+}
+
+.register div:not(.register-title) {
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.register-example {
+    margin-top: -10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.register-buttons {
+    margin-top: 30px;
+}
+
+.register-buttons-register {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffda33;
+    padding: 10px 20px;
+}
+
+.register-buttons-login {
+    border-bottom: 1px dotted #ffda33;
+    color: #ffda33;
+    margin-left: 20px;
+}

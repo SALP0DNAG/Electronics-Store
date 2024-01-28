@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+
+{% block title%}Контакты{% endblock title%}
+
+{% block styles_in_users %}
+    <link rel="stylesheet" href="{% static 'users/css/contacts.css' %}">
+{% endblock styles_in_users %}
+
+{% block users_title %}Контакты{% endblock users_title %}
+
+{% block users_content %}
+    <div class="contact-info">
+        <div class="name">Контактное лицо (ФИО) <span>*</span></div>
+        <input type="text" class="input-name">
+        <div class="telephone">Контактный телефон <span>*</span></div>
+        <input type="text" class="input-telephone">
+        <div class="example">Например: +7(926)111-11-11</div>
+        <div class="email">Email</div>
+        <input type="text" class="input-email">
+        <div class="button-save">
+            <a href="#">Сохранить изменения</a>
+        </div>
+    </div>
+{% endblock users_content %}

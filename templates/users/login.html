@@ -1,0 +1,22 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+
+{% block title%}Вход в кабинет покупателя{% endblock title%}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+{% endblock styles%}
+
+{% block content %}
+    <div class="login">
+        <div class="login-title">Вход в кабинет покупателя</div>
+        <div class="telephone-or-email-label">Телефон или Email <span>*</span></div>
+        <input type="text" class="telephone-or-email-input">
+        <div class="password-label">Пароль <span>*</span></div>
+        <input type="password" class="password-input">
+        <div class="buttons">
+            <a href="#" class="buttons-login">Войти</a>
+            <a href="{% url 'users:register' %}" class="buttons-register">Зарегистрироваться</a>
+        </div>
+    </div>
+{% endblock content %}

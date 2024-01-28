@@ -1,0 +1,54 @@
+.login-title {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.login span{
+    color: red;
+}
+
+.telephone-or-email-label {
+    padding-top: 10px;
+}
+
+.telephone-or-email-label, .password-label {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.login input {
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 50%;
+    margin-top: 5px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.login input:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+.buttons {
+    font-size: 16px;
+    margin-top: 40px;
+    font-weight: normal;
+}
+
+.buttons-login {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffda33;
+    padding: 10px 20px;
+}
+
+.buttons-register {
+    border-bottom: 1px dotted #ffda33;
+    color: #ffda33;
+    margin-left: 20px;
+}

@@ -1,0 +1,28 @@
+.main-block {
+    padding-top: 30px;
+    display:flex;
+    gap: 50px;
+}
+
+.main-block-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: lighter;
+    font-size: 16px;
+    color: #8b8b8b;
+}
+
+.main-block-links a{
+    color: #8b8b8b;
+    text-decoration: underline;
+}
+
+.main-block-links a:hover {
+    text-decoration: none;
+}
+
+.main-block-content {
+    width: 100%;
+    font-size: 22px;
+}

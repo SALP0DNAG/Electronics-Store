@@ -1,0 +1,30 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'users/css/base.css' %}">
+    {% block styles_in_users %}
+    {% endblock styles_in_users %}
+{% endblock styles %}
+
+{% block content %}
+    <div class="main-block">
+        <div class="main-block-links">
+            <a href="{% url 'users:orders' %}">История заказов</a>
+            <a href="{% url 'users:address' %}">Адрес доставки</a>
+            <a href="{% url 'users:discounts-and-bonuses' %}">Скидки и бонусы</a>
+            <a href="{% url 'users:contacts' %}">Контактные данные</a>
+            <a href="">Выход</a>
+        </div>
+        <div class="main-block-content">
+            <div class="title">
+                {% block users_title %}
+                {% endblock users_title %}
+            </div>
+            <div class="content">
+                {% block users_content %}
+                {% endblock users_content %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

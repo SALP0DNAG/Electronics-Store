@@ -1,0 +1,48 @@
+.contact-info input {
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+.contact-info input:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.contact-info span {
+    color: red;
+}
+
+.telephone {
+    margin-top: 10px;
+}
+
+.example {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.email {
+    margin-top: 15px;
+}
+
+.button-save {
+    margin-top: 70px;
+}
+
+.contact-info a{
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffda33;
+    padding: 10px 20px;
+}

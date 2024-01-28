@@ -1,0 +1,55 @@
+.input-city {
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+.city span {
+    color: red;
+}
+
+.city {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.city input:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+.address-label {
+    margin-top: 20px;
+}
+
+.input-address {
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0px 20px 10px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+.input-address:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+.button-save {
+    margin-top: 70px;
+}
+
+.city a{
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffda33;
+    padding: 10px 20px;
+}

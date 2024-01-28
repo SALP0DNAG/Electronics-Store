@@ -1,0 +1,23 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+
+{% block title%}Адрес доставки{% endblock title%}
+
+{% block styles_in_users %}
+    <link rel="stylesheet" href="{% static 'users/css/address.css' %}">
+{% endblock styles_in_users %}
+
+{% block users_title %}Адрес доставки{% endblock users_title %}
+
+{% block users_content %}
+    <div class="city">
+        <div class="city-label">Наслённый пункт <span>*</span></div>
+        <input type="text" class="input-city">
+        <div class="address-label">Адрес</div>
+        <textarea class="input-address" rows="3"></textarea>
+        <div class="button-save">
+            <a href="#">Сохранить изменения</a>
+        </div>
+    </div>
+{% endblock users_content %}
