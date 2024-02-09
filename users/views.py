@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.urls import reverse
+from django.contrib import auth
+from . import forms
 
 
 def orders(request):
@@ -18,8 +21,28 @@ def contacts(request):
 
 
 def login(request):
-    return render(request, 'users/login.html')
+    if request.method == 'POST':
+        form = forms.UserLoginForm(data=request.POST)
+        if form.is_valid():
+            print(request.POST)
+            email = request.POST['username']
+            password = request.POST['password']
+            user = auth.authenticate(email=email, password=password)
+            if user and user.is_active:
+                auth.login(request, user)
+                return HttpResponseRedirect(reverse('users:orders'))
+    else:
+        form = forms.UserLoginForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'users/login.html', context=context)
 
 
 def register(request):
     return render(request, 'users/register.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect(reverse('store:index'))

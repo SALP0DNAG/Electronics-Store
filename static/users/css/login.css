@@ -18,7 +18,7 @@
     font-weight: normal;
 }
 
-.login input {
+.login input:not(.buttons-login) {
     font-family: 'PT Root UI', sans-serif;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.7);
@@ -42,6 +42,8 @@
 }
 
 .buttons-login {
+    border: none;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.8);
     background-color: #ffda33;
     padding: 10px 20px;
