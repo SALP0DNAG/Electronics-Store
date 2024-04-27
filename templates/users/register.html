@@ -9,21 +9,30 @@
 
 {% block content %}
     <div class="register">
-        <div class="register-title">Регистрация</div>
-        <div class="register-name">Контактное лицо (ФИО) <span>*</span></div>
-        <input type="text" class="register-name-input">
-        <div class="register-telephone">Контактный телефон <span>*</span></div>
-        <input type="text" class="register-telephone-input">
-        <div class="register-example">Например: +7(926)111-11-11</div>
-        <div class="register-email">Email <span>*</span></div>
-        <input type="text" class="register-email-input">
-        <div class="register-password">Пароль <span>*</span></div>
-        <input type="password" class="register-password-input">
-        <div class="register-password2">Повторите пароль <span>*</span></div>
-        <input type="password" class="register-password2-input">
-        <div class="register-buttons">
-            <a href="#" class="register-buttons-register">Зарегистрироваться</a>
-            <a href="{% url 'users:login' %}" class="register-buttons-login">У меня уже есть аккаунт</a>
-        </div>
+        <form action="{% url 'users:register' %}" method="post">
+            {% csrf_token %}
+            <div class="register-title">Регистрация</div>
+            <div class="register-name">Имя пользователя <span>*</span></div>
+            {{ form.username }}
+    <!--        <input type="text" class="register-name-input">-->
+            <div class="register-telephone">Контактный телефон </div>
+            {{ form.phone_number }}
+    <!--        <input type="text" class="register-telephone-input">-->
+            <div class="register-example">Например: +7(926)111-11-11</div>
+            <div class="register-email">Email <span>*</span></div>
+            {{ form.email }}
+    <!--        <input type="text" class="register-email-input">-->
+            <div class="register-password">Пароль <span>*</span></div>
+            {{ form.password1 }}
+    <!--        <input type="password" class="register-password-input">-->
+            <div class="register-password2">Повторите пароль <span>*</span></div>
+            {{ form.password2 }}
+    <!--        <input type="password" class="register-password2-input">-->
+            <div class="register-buttons">
+                <input type="submit" class="register-buttons-register" value="Зарегистрироваться">
+<!--                <a href="#" class="register-buttons-register">Зарегистрироваться</a>-->
+                <a href="{% url 'users:login' %}" class="register-buttons-login">У меня уже есть аккаунт</a>
+            </div>
+        </form>
     </div>
 {% endblock content %}

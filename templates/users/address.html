@@ -12,12 +12,17 @@
 
 {% block users_content %}
     <div class="city">
-        <div class="city-label">Наслённый пункт <span>*</span></div>
-        <input type="text" class="input-city">
-        <div class="address-label">Адрес</div>
-        <textarea class="input-address" rows="3"></textarea>
-        <div class="button-save">
-            <a href="#">Сохранить изменения</a>
-        </div>
+        <form action="{% url 'users:address' %}" method="post">
+            {% csrf_token %}
+            <div class="city-label">Наслённый пункт <span>*</span></div>
+            {{ form.city }}
+<!--            <input type="text" class="input-city">-->
+            <div class="address-label">Адрес</div>
+            {{ form.address }}
+<!--            <textarea class="input-address" rows="3"></textarea>-->
+            <div class="button-save">
+                <input type="submit" value="Сохранить изменения">
+            </div>
+        </form>
     </div>
 {% endblock users_content %}

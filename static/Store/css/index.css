@@ -42,7 +42,7 @@
 	padding-top: 8%;
 	padding-left: 30px;
 	display: flex;
-	gap: 20px;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -62,7 +62,7 @@
 	text-decoration: none;
 	color: black;
 	background-color: #ffda33;
-	padding: 10px 100px;
+	padding: 10px 70px;
 }
 
 .special-line {

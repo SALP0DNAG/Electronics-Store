@@ -22,6 +22,10 @@
     text-decoration: none;
 }
 
+.main-block-links a:active {
+    color: #ffda33;
+}
+
 .main-block-content {
     width: 100%;
     font-size: 22px;

@@ -10,12 +10,13 @@
 {% block content %}
     <div class="login">
         <form action="{% url 'users:login' %}" method="post">
+            <div class="login-title">Вход в кабинет покупателя</div>
             {% csrf_token %}
-            {{ form.as_div }}
-<!--            <div class="login-title">Вход в кабинет покупателя</div>-->
-<!--            <div class="telephone-or-email-label">Телефон или Email <span>*</span></div>-->
+            <div class="telephone-or-email-label">Email <span>*</span></div>
+                {{ form.username }}
 <!--            <input type="text" class="telephone-or-email-input">-->
-<!--            <div class="password-label">Пароль <span>*</span></div>-->
+            <div class="password-label">Пароль <span>*</span></div>
+                {{ form.password }}
 <!--            <input type="password" class="password-input">-->
             <div class="buttons">
                 <input type="submit" class="buttons-login" value="Войти">

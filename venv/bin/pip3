@@ -1,4 +1,4 @@
-#!/home/matvey/PycharmProjects/Grand-store/venv/bin/python3
+#!/home/salpodnag/Documents/PycharmProjects/Grand-store/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
