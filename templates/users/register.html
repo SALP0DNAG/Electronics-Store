@@ -8,6 +8,13 @@
 {% endblock styles %}
 
 {% block content %}
+    {% if form.errors %}
+        {% for field, error in form.errors.items %}
+            <div class="errors">
+                {{ error | striptags }}
+            </div>
+        {% endfor %}
+    {% endif %}
     <div class="register">
         <form action="{% url 'users:register' %}" method="post">
             {% csrf_token %}

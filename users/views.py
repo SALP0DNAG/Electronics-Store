@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
-from django.contrib import auth
-from . import forms
+from django.contrib import auth, messages
+from . import forms, models
 
 
 def orders(request):
@@ -26,7 +26,14 @@ def discounts_and_bonuses(request):
 def contacts(request):
     if request.method == 'POST':
         form = forms.ContactsForm(data=request.POST, instance=request.user)
+        if (models.User.objects.filter(email=request.POST['email']).exists() and
+                request.user.email != request.POST['email']):
+            messages.error(request, 'Почта с таким адресом уже существует')
+        if (models.User.objects.filter(username=request.POST['username']).exists() and
+                request.user.username != request.POST['username']):
+            messages.error(request, 'Пользователь с таким именем уже существет')
         if form.is_valid():
+            messages.success(request, "Пользователь успешно изменен")
             form.save()
     else:
         form = forms.ContactsForm(instance=request.user)
@@ -57,6 +64,7 @@ def register(request):
         form = forms.UserRegistrationForm(data=request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Вы успешно зарегестрировались!')
             return HttpResponseRedirect(reverse('users:login'))
     else:
         form = forms.UserRegistrationForm()

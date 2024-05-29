@@ -63,7 +63,7 @@
                                 {{ product.price }} руб
                             </div>
                             <div class="hidden-block">
-                                <a href="">
+                                <a href="{% url 'store:basket_add' product.id %}">
                                     <div class="add-item-in-basket">В корзину</div>
                                 </a>
                                 <a href="">

@@ -54,3 +54,24 @@
     color: #ffda33;
     margin-left: 20px;
 }
+
+.success {
+    width: 30%;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: #19CD31;
+    border-radius: 5px;
+    color: white;
+}
+
+.error {
+    font-size: 14px;
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: #FF3C3C;
+    border-radius: 5px;
+    color: white;
+}

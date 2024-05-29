@@ -1,0 +1,39 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/basket.css' %}">
+{% endblock styles %}
+
+{% block title %}Корзина{% endblock title %}
+{% block content %}
+    <h1>Корзина</h1>
+    {% if baskets %}
+         <div class="cart">
+            {% for basket in baskets %}
+                <div class="product">
+                    <div class="product-left">
+                        <img src="/media/{{ basket.product.image }}" alt="">
+                        <a href="#">{{basket.product.name}}</a>
+                    </div>
+                    <div class="product-right">
+                        <div class="product-price">{{basket.product.price}} руб/шт</div>
+                        <div class="product-quantity">
+                            <a href="{% url 'store:basket_minus' basket.id%}" class="product-quantity-change">-</a>
+                            {{basket.quantity}}
+                            <a href="{% url 'store:basket_add' basket.product.id%}" class="product-quantity-change">+</a>
+                        </div>
+                        <div class="product-sum">10 руб</div>
+                        <a href="{% url 'store:basket_delete' basket.id %}"><img src="{% static 'Store/img/cross.png'%}" alt=""></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="promocode-and-order">
+            <div class="promocode"></div>
+            <div class="order"></div>
+        </div>
+    {% else %}
+        <div class="clear-basket">Ваша корзина пуста</div>
+    {% endif %}
+{% endblock content%}

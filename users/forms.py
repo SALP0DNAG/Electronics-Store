@@ -28,8 +28,8 @@ class UserRegistrationForm(UserCreationForm):
 
 
 class AddressForm(forms.ModelForm):
-    city = forms.CharField(widget=forms.TextInput(attrs={'class': 'input-city'}))
-    address = forms.CharField(widget=forms.Textarea(attrs={'class': 'input-address', 'rows': '3'}))
+    city = forms.CharField(widget=forms.TextInput(attrs={'class': 'input-city'}), required=False)
+    address = forms.CharField(widget=forms.Textarea(attrs={'class': 'input-address', 'rows': '3'}), required=False)
 
     class Meta:
         model = models.User
@@ -38,7 +38,7 @@ class AddressForm(forms.ModelForm):
 
 class ContactsForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={}))
-    phone_number = PhoneNumberField()
+    phone_number = PhoneNumberField(error_messages=['Неправильный международный код или номер мобильного телефона!'],)
     email = forms.EmailField(widget=forms.EmailInput(attrs={}))
 
     class Meta:

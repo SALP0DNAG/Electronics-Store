@@ -56,3 +56,13 @@
     color: #ffda33;
     margin-left: 20px;
 }
+
+.errors {
+    font-size: 14px;
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px 10px;
+    background-color: #FF3C3C;
+    border-radius: 5px;
+    color: white;
+}

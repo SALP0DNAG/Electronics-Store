@@ -8,6 +8,14 @@
 {% endblock styles%}
 
 {% block content %}
+    {% if messages or form.errors %}
+            <div class=" {% if messages %} success {% else %} error {% endif %}">
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+                {{ form.non_field_errors | striptags }}
+            </div>
+    {% endif %}
     <div class="login">
         <form action="{% url 'users:login' %}" method="post">
             <div class="login-title">Вход в кабинет покупателя</div>

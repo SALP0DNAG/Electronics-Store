@@ -1,4 +1,5 @@
 from django.db import models
+from users import models as md
 
 
 class ProductCategory(models.Model):
@@ -55,3 +56,16 @@ class Characteristics(models.Model):
 
     def __str__(self):
         return f"Характеристики для товара {self.product.name}"
+
+
+class Basket(models.Model):
+    user = models.ForeignKey(md.User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    created_timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Корзина для {self.user.username} | Продукт {self.product.name}, {self.quantity} штук'
+
+    def sum(self):
+        return self.quantity * self.product.price
