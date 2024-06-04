@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from . import models
+from . import forms
 
 
 def index(request):
@@ -28,13 +30,24 @@ def favorites(request):
     return render(request, 'Store/favorites.html')
 
 
+@login_required
 def basket(request):
+    if request.method == 'POST':
+        promocode_form = forms.PromocodeForm(request.POST)
+        if promocode_form.is_valid():
+            pass
+    promocode_form = forms.PromocodeForm()
+    baskets = models.Basket.objects.filter(user=request.user)
+    total_sum = sum(basket.sum() for basket in baskets)
     context = {
-        'baskets': models.Basket.objects.filter(user=request.user)
+        'baskets': baskets,
+        'promocode_form': promocode_form,
+        'total_sum': total_sum
     }
     return render(request, 'Store/basket.html', context)
 
 
+@login_required
 def basket_add(request, product_id):
     product = models.Product.objects.get(id=product_id)
     baskets = models.Basket.objects.filter(user=request.user, product=product)
@@ -49,6 +62,7 @@ def basket_add(request, product_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+@login_required
 def basket_minus(request, basket_id):
     basket = models.Basket.objects.get(id=basket_id)
     if basket.quantity > 1:
@@ -57,6 +71,7 @@ def basket_minus(request, basket_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+@login_required
 def basket_delete(request, basket_id):
     basket = models.Basket.objects.get(id=basket_id)
     basket.delete()

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static store_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +48,7 @@
                         </a>
                     {% else %}
                         <a href="{% url 'users:login' %}">
-                                <img src="{% static 'Store/img/profile.png' %}" alt="">
+                            <img src="{% static 'Store/img/profile.png' %}" alt="">
                             <span>Профиль</span>
                         </a>
                     {% endif %}
@@ -59,7 +59,7 @@
                         <span>Корзина</span>
                     </a>
                     <div class="quantity-products">
-                        0
+                        {% get_total_quantity request %}
                     </div>
                 </div>
             </div>

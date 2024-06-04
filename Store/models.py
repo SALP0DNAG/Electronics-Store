@@ -69,3 +69,4 @@ class Basket(models.Model):
 
     def sum(self):
         return self.quantity * self.product.price
+

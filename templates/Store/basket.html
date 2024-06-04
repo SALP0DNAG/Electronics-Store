@@ -1,5 +1,5 @@
 {% extends 'Store/base.html' %}
-{% load static %}
+{% load static store_tags %}
 
 {% block styles %}
     <link rel="stylesheet" href="{% static 'Store/css/basket.css' %}">
@@ -23,15 +23,35 @@
                             {{basket.quantity}}
                             <a href="{% url 'store:basket_add' basket.product.id%}" class="product-quantity-change">+</a>
                         </div>
-                        <div class="product-sum">10 руб</div>
+                        <div class="product-sum">{{basket.sum}} руб</div>
                         <a href="{% url 'store:basket_delete' basket.id %}"><img src="{% static 'Store/img/cross.png'%}" alt=""></a>
                     </div>
                 </div>
             {% endfor %}
         </div>
         <div class="promocode-and-order">
-            <div class="promocode"></div>
-            <div class="order"></div>
+            <div class="promocode">
+                <form action="{% url 'store:basket' %}" method="post">
+                    {% csrf_token %}
+                    {{ promocode_form.promocode }}
+                    <div class="button-apply-promocode">
+                        <input type="submit" value="Применить" name="promocode">
+                    </div>
+                </form>
+            </div>
+            <div class="order">
+                <div class="amount">
+                    <div class="caption-products">Товары ({% get_total_quantity request %})</div>
+                    <div class="amount-price">{{ total_sum }} руб</div>
+                </div>
+                <div class="total">
+                    <div class="caption-total">Итого:</div>
+                    <div class="finally-price">{{ total_sum }} руб</div>
+                </div>
+                <div class="button-apply-order">
+                    <input type="submit" style="width: 100%" value="Оформить заказ" name="order">
+                </div>
+            </div>
         </div>
     {% else %}
         <div class="clear-basket">Ваша корзина пуста</div>
