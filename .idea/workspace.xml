@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7362995-f187-48f5-a46b-7b466d9db167" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Store/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/templatestags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Store/templatestags/store_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Store/css/category.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Store/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Grand_store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Grand_store/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/fixtures/products.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Store/css/basket.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Store/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Store/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Store/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Store/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special1.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special2.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special3.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Store/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.grand_store.executor": "Run",
-    "Python.views.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/salpodnag/Documents/PycharmProjects/Grand-store/manage.py",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.grand_store.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/salpodnag/Documents/PycharmProjects/Grand-store/manage.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="grand_store" type="PythonConfigurationType" factoryName="Python">
-      <module name="Electronics_store" />
+      <module name="Grand-store" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,7 +85,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -98,6 +102,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Store/views.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Store/views.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

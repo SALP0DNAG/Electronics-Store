@@ -9,7 +9,7 @@
     <div class="categories">
         <div class="category">
             {% for category in categories %}
-                <a href="#">
+                <a href="{% url 'store:category' category.name %}">
                     <img src="/media/{{ category.image }}" alt="">
                     <span class="category-name">
                         {{ category.name }}
@@ -17,7 +17,7 @@
                 </a>
             {% endfor %}
 
-            <a href="" class="all_categories">
+            <a href="{% url 'store:category_all' %}" class="all_categories">
                 <img src="{% static 'Store/img/all_categories.png' %}" alt="">
                 <span>Все категории</span>
             </a>

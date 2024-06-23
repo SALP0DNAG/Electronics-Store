@@ -3,7 +3,7 @@ from users import models as md
 
 
 class ProductCategory(models.Model):
-    name = models.CharField(max_length=64)
+    name = models.CharField(max_length=64, unique=True)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='category_images')
 

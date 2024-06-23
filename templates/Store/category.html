@@ -1,0 +1,51 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/category.css' %}">
+{% endblock styles %}
+
+{% block title %}{{category_name}}{% endblock title %}
+{% block content %}
+    <div class="path">
+        <a href="{% url 'store:index' %}">Главная</a>
+        <div class="separator">-</div>
+        {% if category_name == 'Все категории' %}
+            <a href="{% url 'store:category_all' %}">{{ category_name }}</a>
+        {% else %}
+            <a href="{% url 'store:category' category_name %}">{{ category_name }}</a>
+        {% endif %}
+    </div>
+    <h1>{{category_name}}</h1>
+    <form method="post" action="{% url 'store:category' category_name %}">
+        {% csrf_token %}
+        {{ sort_form.as_div }}
+        <input type="submit">
+    </form>
+    <div class="special-line-card-and-hidden-block">
+        {% for product in products %}
+            <div class="special-line-card">
+                <a href="#">
+                    <img src="/media/{{ product.image }}" class="special-line-card-image" alt="">
+                    <div class="special-line-card-title">
+                        {{ product.name }}
+                    </div>
+                    <div class="special-line-card-price">
+                        {{ product.price }} руб
+                    </div>
+                    <div class="hidden-block">
+                        <a href="{% url 'store:basket_add' product.id %}">
+                            <div class="add-item-in-basket">В корзину</div>
+                        </a>
+                        <a href="">
+                            <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                        </a>
+                        <a href="">
+                            <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                        </a>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content%}

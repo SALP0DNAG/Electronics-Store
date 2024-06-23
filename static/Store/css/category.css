@@ -1,0 +1,108 @@
+h1 {
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+}
+
+.path {
+    margin-top: 20px;
+    display: flex;
+}
+
+.separator {
+    color: #bebebe;
+    font-weight: normal;
+    margin: 0 15px;
+}
+
+.path a{
+    color: #bebebe;
+    font-weight: normal;
+}
+
+.special-line-card-and-hidden-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.special-line-card {
+	width: 215px;
+	border-radius: 3px;
+}
+
+.special-line-card:hover {
+	transition: 0.3s easy;
+	border-bottom: none;
+	border: 2px solid #ffda33;
+	border-bottom: none;
+	border-radius: 3px;
+}
+
+.hidden-block {
+	display: flex;
+	justify-content: space-around;
+	border-radius: 0 0 3px 3px;
+	opacity: 0;
+	margin-top: -5px;
+	padding-bottom: 10px;
+	border: 2px solid #ffda33;
+	border-right: none;
+	border-left: none;
+}
+
+.hidden-block img {
+	padding: 5px;
+	background-color: #f7f7f7;
+}
+
+.special-line-card:hover .hidden-block{
+	opacity: 1;
+	transition: 0.3s;
+	border-top: none;
+}
+
+.special-line-card:hover .special-line-card-title {
+	border: none;
+}
+
+.special-line-card-title {
+	border-right: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+	padding: 0 15px;
+	height: 59px;
+	margin-top: -5px;
+	color: #333333;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.special-line-card:hover .special-line-card-price{
+	border: none;
+}
+
+.special-line-card-price {
+	padding: 10px 0 20px 15px;
+	font-size: 26px;
+	color: #333333;
+	border: 1px solid #ededed;
+	border-top: none;
+	border-radius: 0 0 3px 3px;
+}
+
+.add-item-in-basket {
+	color: #333333;
+	background-color: #ffda33;
+	padding: 10px 10px;
+}
+
+.special-line-card:hover .special-line-card-image {
+	border: none;
+}
+
+.special-line-card-image {
+	width: 133px;
+	padding: 15px 40px;
+	border: 1px solid #ededed;
+	border-radius: 3px 3px 0 0;
+	border-bottom: none;
+}

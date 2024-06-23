@@ -39,7 +39,7 @@
     "model": "Store.product",
     "pk": 4,
     "fields": {
-      "name": "",
+      "name": "Смеситель для ванны с душем",
       "description": "Смеситель для ванны с душем",
       "image": "products_images/plumbing_special_card_4.webp",
       "category": 3,
@@ -93,6 +93,1062 @@
       "category": 1,
       "price": 2070,
       "quantity": 16
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Виниловые обои на флизелиновой основе",
+      "description": "",
+      "image": "products_images/wallpaper_5.webp",
+      "category": 1,
+      "price": 2020,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 12,
+    "fields": {
+      "name": "Виниловые обои на флизелиновой основе",
+      "description": "",
+      "image": "products_images/wallpaper_6.webp",
+      "category": 1,
+      "price": 1463,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Виниловые обои на флизелиновой основе",
+      "description": "",
+      "image": "products_images/wallpaper_7.webp",
+      "category": 1,
+      "price": 1850,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 14,
+    "fields": {
+      "name": "Флизелиновые обои",
+      "description": "",
+      "image": "products_images/wallpaper_8.webp",
+      "category": 1,
+      "price": 1562,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 15,
+    "fields": {
+      "name": "Флизелиновые обои",
+      "description": "",
+      "image": "products_images/wallpaper_9.webp",
+      "category": 1,
+      "price": 1675,
+      "quantity": 141
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 16,
+    "fields": {
+      "name": "Виниловые обои горячего тиснения",
+      "description": "",
+      "image": "products_images/wallpaper_10.webp",
+      "category": 1,
+      "price": 1900,
+      "quantity": 149
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 17,
+    "fields": {
+      "name": "Виниловые обои на флизелиновой основе",
+      "description": "",
+      "image": "products_images/wallpaper_11.webp",
+      "category": 1,
+      "price": 1850,
+      "quantity": 99
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 18,
+    "fields": {
+      "name": "Обои виниловые на флизелиновой основе",
+      "description": "",
+      "image": "products_images/wallpaper_12.webp",
+      "category": 1,
+      "price": 1698,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 19,
+    "fields": {
+      "name": "Однорычажный смеситель для раковины",
+      "description": "",
+      "image": "products_images/plumbing_5.webp",
+      "category": 3,
+      "price": 5024,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 20,
+    "fields": {
+      "name": "Смеситель для ванны и душа",
+      "description": "",
+      "image": "products_images/plumbing_6.webp",
+      "category": 3,
+      "price": 4000,
+      "quantity": 6
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 21,
+    "fields": {
+      "name": "Смеситель для ванны",
+      "description": "",
+      "image": "products_images/plumbing_7.webp",
+      "category": 3,
+      "price": 1959,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 22,
+    "fields": {
+      "name": "Смеситель для умывальника/раковины",
+      "description": "",
+      "image": "products_images/plumbing_8.webp",
+      "category": 3,
+      "price": 6890,
+      "quantity": 13
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 23,
+    "fields": {
+      "name": "Смеситель",
+      "description": "",
+      "image": "products_images/plumbing_9.webp",
+      "category": 3,
+      "price": 2417,
+      "quantity": 7
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 24,
+    "fields": {
+      "name": "Душевая стойка с термостатом и тропическим душем",
+      "description": "",
+      "image": "products_images/plumbing_10.webp",
+      "category": 3,
+      "price": 15044,
+      "quantity": 100
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 25,
+    "fields": {
+      "name": "Смеситель",
+      "description": "",
+      "image": "products_images/plumbing_11.webp",
+      "category": 3,
+      "price": 1636,
+      "quantity": 3
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 26,
+    "fields": {
+      "name": "Смеситель",
+      "description": "",
+      "image": "products_images/plumbing_12.webp",
+      "category": 3,
+      "price": 13340,
+      "quantity": 145
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 27,
+    "fields": {
+      "name": "Подвес",
+      "description": "",
+      "image": "products_images/illumination_1.webp",
+      "category": 2,
+      "price": 4499,
+      "quantity": 12
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 28,
+    "fields": {
+      "name": "Люстра",
+      "description": "",
+      "image": "products_images/illumination_2.webp",
+      "category": 2,
+      "price": 3999,
+      "quantity": 1234
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 29,
+    "fields": {
+      "name": "Люстра",
+      "description": "",
+      "image": "products_images/illumination_3.webp",
+      "category": 2,
+      "price": 5050,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 30,
+    "fields": {
+      "name": "Подвес",
+      "description": "",
+      "image": "products_images/illumination_4.webp",
+      "category": 2,
+      "price": 3499,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 31,
+    "fields": {
+      "name": "Люстра",
+      "description": "",
+      "image": "products_images/illumination_5.webp",
+      "category": 2,
+      "price": 9999,
+      "quantity": 1234
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 32,
+    "fields": {
+      "name": "Настольная лампа",
+      "description": "",
+      "image": "products_images/illumination_6.webp",
+      "category": 2,
+      "price": 2034,
+      "quantity": 44
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 33,
+    "fields": {
+      "name": "Светильник",
+      "description": "",
+      "image": "products_images/illumination_7.webp",
+      "category": 2,
+      "price": 920,
+      "quantity": 55
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 34,
+    "fields": {
+      "name": "Светильник",
+      "description": "",
+      "image": "products_images/illumination_8.webp",
+      "category": 2,
+      "price": 1104,
+      "quantity": 12
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 35,
+    "fields": {
+      "name": "Настольная Лампа",
+      "description": "",
+      "image": "products_images/illumination_9.webp",
+      "category": 2,
+      "price": 3290,
+      "quantity": 435
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 36,
+    "fields": {
+      "name": "Люстра",
+      "description": "",
+      "image": "products_images/illumination_10.webp",
+      "category": 2,
+      "price": 3170,
+      "quantity": 67
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 37,
+    "fields": {
+      "name": "Люстра светодиодная",
+      "description": "",
+      "image": "products_images/illumination_11.webp",
+      "category": 2,
+      "price": 6000,
+      "quantity": 32
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 38,
+    "fields": {
+      "name": "Лампа настольная с абажуром",
+      "description": "",
+      "image": "products_images/illumination_12.webp",
+      "category": 2,
+      "price": 3561,
+      "quantity": 65
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 39,
+    "fields": {
+      "name": "Фен строительный",
+      "description": "",
+      "image": "products_images/instruments_1.webp",
+      "category": 4,
+      "price": 1169,
+      "quantity": 5
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 40,
+    "fields": {
+      "name": "Шлифмашина угловая",
+      "description": "",
+      "image": "products_images/instruments_2.webp",
+      "category": 4,
+      "price": 2670,
+      "quantity": 78
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 41,
+    "fields": {
+      "name": "Эксцентриковая шлифмашина",
+      "description": "",
+      "image": "products_images/instruments_3.webp",
+      "category": 4,
+      "price": 7590,
+      "quantity": 9
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 42,
+    "fields": {
+      "name": "Дрель ударная",
+      "description": "",
+      "image": "products_images/instruments_4.webp",
+      "category": 4,
+      "price": 1526,
+      "quantity": 84
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 43,
+    "fields": {
+      "name": "Сварочный аппарат инверторный",
+      "description": "",
+      "image": "products_images/instruments_5.webp",
+      "category": 4,
+      "price": 19995,
+      "quantity": 65
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 44,
+    "fields": {
+      "name": "Аккумуляторная цепная пила",
+      "description": "",
+      "image": "products_images/instruments_6.webp",
+      "category": 4,
+      "price": 23692,
+      "quantity": 75
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 45,
+    "fields": {
+      "name": "Гайковерт аккумуляторный",
+      "description": "",
+      "image": "products_images/instruments_7.webp",
+      "category": 4,
+      "price": 14190,
+      "quantity": 10
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 46,
+    "fields": {
+      "name": "Аккумуляторная дрель-шуруповерт",
+      "description": "",
+      "image": "products_images/instruments_8.webp",
+      "category": 4,
+      "price": 3178,
+      "quantity": 89
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 47,
+    "fields": {
+      "name": "Перфоратор",
+      "description": "",
+      "image": "products_images/instruments_9.webp",
+      "category": 4,
+      "price": 7553,
+      "quantity": 81
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 48,
+    "fields": {
+      "name": "Аккумуляторная дрель-шуруповерт",
+      "description": "",
+      "image": "products_images/instruments_10.webp",
+      "category": 4,
+      "price": 3260,
+      "quantity": 76
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 49,
+    "fields": {
+      "name": "Дрель-шуруповерт аккумуляторная",
+      "description": "",
+      "image": "products_images/instruments_11.webp",
+      "category": 4,
+      "price": 8998,
+      "quantity": 13
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 50,
+    "fields": {
+      "name": "ЗУБР / Краскопульт электрический КПЭ-350, 60 DIN",
+      "description": "",
+      "image": "products_images/instruments_12.webp",
+      "category": 4,
+      "price": 3480,
+      "quantity": 567
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 51,
+    "fields": {
+      "name": "Плитка ПВХ",
+      "description": "",
+      "image": "products_images/floor_covering_1.webp",
+      "category": 5,
+      "price": 1985,
+      "quantity": 44
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 52,
+    "fields": {
+      "name": "Плитка ПВХ клеевая",
+      "description": "",
+      "image": "products_images/floor_covering_2.webp",
+      "category": 5,
+      "price": 1985,
+      "quantity": 51
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 53,
+    "fields": {
+      "name": "Плитка ПВХ клеевая",
+      "description": "",
+      "image": "products_images/floor_covering_3.webp",
+      "category": 5,
+      "price": 1985,
+      "quantity": 99
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 54,
+    "fields": {
+      "name": "Клеевая плитка ПВХ",
+      "description": "",
+      "image": "products_images/floor_covering_4.webp",
+      "category": 5,
+      "price": 1985,
+      "quantity": 59
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 55,
+    "fields": {
+      "name": "Плитка ПВХ клеевая",
+      "description": "",
+      "image": "products_images/floor_covering_5.webp",
+      "category": 5,
+      "price": 6386,
+      "quantity": 123
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 56,
+    "fields": {
+      "name": "Плитка ПВХ клеевая",
+      "description": "",
+      "image": "products_images/floor_covering_6.webp",
+      "category": 5,
+      "price": 6159,
+      "quantity": 146
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 57,
+    "fields": {
+      "name": "Плитка",
+      "description": "",
+      "image": "products_images/floor_covering_7.webp",
+      "category": 5,
+      "price": 4600,
+      "quantity": 6
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 58,
+    "fields": {
+      "name": "Плитка ПВХ замковая",
+      "description": "",
+      "image": "products_images/floor_covering_8.webp",
+      "category": 5,
+      "price": 4099,
+      "quantity": 59
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 59,
+    "fields": {
+      "name": "Плитка ПВХ замковая",
+      "description": "",
+      "image": "products_images/floor_covering_9.webp",
+      "category": 5,
+      "price": 4165,
+      "quantity": 67
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 60,
+    "fields": {
+      "name": "Плитка ПВХ IVC замковая",
+      "description": "",
+      "image": "products_images/floor_covering_10.webp",
+      "category": 5,
+      "price": 4165,
+      "quantity": 67
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 61,
+    "fields": {
+      "name": "Плитка ковровая",
+      "description": "",
+      "image": "products_images/floor_covering_11.webp",
+      "category": 5,
+      "price": 12070,
+      "quantity": 86
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 62,
+    "fields": {
+      "name": "Плитка ковровая",
+      "description": "",
+      "image": "products_images/floor_covering_12.webp",
+      "category": 5,
+      "price": 12050,
+      "quantity": 95
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 63,
+    "fields": {
+      "name": "Шпатлевка для стен и потолков",
+      "description": "",
+      "image": "products_images/building_materials_1.webp",
+      "category": 6,
+      "price": 455,
+      "quantity": 76
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 64,
+    "fields": {
+      "name": "Суперпластификатор для теплого пола",
+      "description": "",
+      "image": "products_images/building_materials_2.webp",
+      "category": 6,
+      "price": 591,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 65,
+    "fields": {
+      "name": "Шпатлевка",
+      "description": "",
+      "image": "products_images/building_materials_3.webp",
+      "category": 6,
+      "price": 523,
+      "quantity": 584
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 66,
+    "fields": {
+      "name": "Полипропиленовая фибра",
+      "description": "",
+      "image": "products_images/building_materials_4.webp",
+      "category": 6,
+      "price": 400,
+      "quantity": 67
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 67,
+    "fields": {
+      "name": "Штукатурка",
+      "description": "",
+      "image": "products_images/building_materials_5.webp",
+      "category": 6,
+      "price": 542,
+      "quantity": 97
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 68,
+    "fields": {
+      "name": "Клей для плитки",
+      "description": "",
+      "image": "products_images/building_materials_6.webp",
+      "category": 6,
+      "price": 722,
+      "quantity": 91
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 69,
+    "fields": {
+      "name": "Цемент серый",
+      "description": "",
+      "image": "products_images/building_materials_7.webp",
+      "category": 6,
+      "price": 349,
+      "quantity": 64
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 70,
+    "fields": {
+      "name": "Затирка",
+      "description": "",
+      "image": "products_images/building_materials_8.webp",
+      "category": 6,
+      "price": 224,
+      "quantity": 100
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 71,
+    "fields": {
+      "name": "Гипс строительный",
+      "description": "",
+      "image": "products_images/building_materials_9.webp",
+      "category": 6,
+      "price": 280,
+      "quantity": 16
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 72,
+    "fields": {
+      "name": "Шпатлевка",
+      "description": "",
+      "image": "products_images/building_materials_10.webp",
+      "category": 6,
+      "price": 380,
+      "quantity": 15
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 73,
+    "fields": {
+      "name": "Влагостойкая шпатлевка",
+      "description": "",
+      "image": "products_images/building_materials_11.webp",
+      "category": 6,
+      "price": 2141,
+      "quantity": 59
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 74,
+    "fields": {
+      "name": "Шпатлевка латексная финишная",
+      "description": "",
+      "image": "products_images/building_materials_12.webp",
+      "category": 6,
+      "price": 362,
+      "quantity": 185
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 75,
+    "fields": {
+      "name": "Краска для внутренних работ",
+      "description": "",
+      "image": "products_images/paint_1.webp",
+      "category": 7,
+      "price": 510,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 76,
+    "fields": {
+      "name": "Краска для потолков",
+      "description": "",
+      "image": "products_images/paint_2.webp",
+      "category": 7,
+      "price": 235,
+      "quantity": 95
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 77,
+    "fields": {
+      "name": "Эмаль для радиаторов",
+      "description": "",
+      "image": "products_images/paint_3.webp",
+      "category": 7,
+      "price": 676,
+      "quantity": 57
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 78,
+    "fields": {
+      "name": "Водоразбавляемая краска",
+      "description": "",
+      "image": "products_images/paint_4.webp",
+      "category": 7,
+      "price": 1900,
+      "quantity": 77
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 79,
+    "fields": {
+      "name": "Воск в банке",
+      "description": "",
+      "image": "products_images/paint_5.webp",
+      "category": 7,
+      "price": 765,
+      "quantity": 89
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 80,
+    "fields": {
+      "name": "Краска для стен и потолков",
+      "description": "",
+      "image": "products_images/paint_6.webp",
+      "category": 7,
+      "price": 7990,
+      "quantity": 75
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 81,
+    "fields": {
+      "name": "Краска для стен и потолков",
+      "description": "",
+      "image": "products_images/paint_7.webp",
+      "category": 7,
+      "price": 2750,
+      "quantity": 78
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 82,
+    "fields": {
+      "name": "Краска для пола и лестниц",
+      "description": "",
+      "image": "products_images/paint_8.webp",
+      "category": 7,
+      "price": 1569,
+      "quantity": 89
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 83,
+    "fields": {
+      "name": "Краска для радиаторов",
+      "description": "",
+      "image": "products_images/paint_9.webp",
+      "category": 7,
+      "price": 828,
+      "quantity": 77
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 84,
+    "fields": {
+      "name": "Краска меловая",
+      "description": "",
+      "image": "products_images/paint_10.webp",
+      "category": 7,
+      "price": 585,
+      "quantity": 71
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 85,
+    "fields": {
+      "name": "Эмаль",
+      "description": "",
+      "image": "products_images/paint_11.webp",
+      "category": 7,
+      "price": 455,
+      "quantity": 981
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 86,
+    "fields": {
+      "name": "Краска для школьных досок",
+      "description": "",
+      "image": "products_images/paint_12.webp",
+      "category": 7,
+      "price": 1809,
+      "quantity": 6
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 87,
+    "fields": {
+      "name": "Окно ПВХ",
+      "description": "",
+      "image": "products_images/windows_and_doors_1.webp",
+      "category": 8,
+      "price": 9819,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 88,
+    "fields": {
+      "name": "Окно",
+      "description": "",
+      "image": "products_images/windows_and_doors_2.webp",
+      "category": 8,
+      "price": 1950,
+      "quantity": 13
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 89,
+    "fields": {
+      "name": "Окно ПВХ фрамуга",
+      "description": "",
+      "image": "products_images/windows_and_doors_3.webp",
+      "category": 8,
+      "price": 5900,
+      "quantity": 58
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 90,
+    "fields": {
+      "name": "Ручка для пластиковых окон, дверей",
+      "description": "",
+      "image": "products_images/windows_and_doors_4.webp",
+      "category": 8,
+      "price": 220,
+      "quantity": 15
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 91,
+    "fields": {
+      "name": "Замок блокиратор",
+      "description": "",
+      "image": "products_images/windows_and_doors_5.webp",
+      "category": 8,
+      "price": 287,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 92,
+    "fields": {
+      "name": "Монтажный набор для окон",
+      "description": "",
+      "image": "products_images/windows_and_doors_6.webp",
+      "category": 8,
+      "price": 325,
+      "quantity": 54
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 93,
+    "fields": {
+      "name": "Стильная оконная ручка",
+      "description": "",
+      "image": "products_images/windows_and_doors_7.webp",
+      "category": 8,
+      "price": 391,
+      "quantity": 15
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 94,
+    "fields": {
+      "name": "Детский замок блокиратор",
+      "description": "",
+      "image": "products_images/windows_and_doors_8.webp",
+      "category": 8,
+      "price": 225,
+      "quantity": 64
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 95,
+    "fields": {
+      "name": "Ограничитель створки для окна",
+      "description": "",
+      "image": "products_images/windows_and_doors_9.webp",
+      "category": 8,
+      "price": 220,
+      "quantity": 51
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 96,
+    "fields": {
+      "name": "Замок блокирующий для окон",
+      "description": "",
+      "image": "products_images/windows_and_doors_10.webp",
+      "category": 8,
+      "price": 439,
+      "quantity": 57
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 97,
+    "fields": {
+      "name": "Москитная сетка",
+      "description": "",
+      "image": "products_images/windows_and_doors_11.webp",
+      "category": 8,
+      "price": 2400,
+      "quantity": 500
+    }
+  },
+  {
+    "model": "Store.product",
+    "pk": 98,
+    "fields": {
+      "name": "Ручка оконная",
+      "description": "",
+      "image": "products_images/windows_and_doors_12.webp",
+      "category": 8,
+      "price": 1210,
+      "quantity": 13
     }
   }
 ]

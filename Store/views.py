@@ -76,3 +76,26 @@ def basket_delete(request, basket_id):
     basket = models.Basket.objects.get(id=basket_id)
     basket.delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def category(request, category_name):
+    sort_form = forms.SortForm()
+    category = models.ProductCategory.objects.get(name=category_name)
+    products = models.Product.objects.filter(category=category.id)
+    context = {
+        'category_name': category.name,
+        'products': products,
+        'sort_form': sort_form,
+    }
+    return render(request, 'Store/category.html', context=context)
+
+
+def category_all(request):
+    products = models.Product.objects.all()
+    form = forms.SortForm()
+    context = {
+        'category_name': 'Все категории',
+        'products': products,
+        'sort_form': form
+    }
+    return render(request, 'Store/category.html', context=context)
