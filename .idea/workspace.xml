@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7362995-f187-48f5-a46b-7b466d9db167" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/Store/css/category.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Store/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="81491f38-26f5-452f-bce0-4bc8cc15dd7a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/Store/css/favorites.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Store/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Electronics_store.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Store/fixtures/products.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Store/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Store/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special1.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special2.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Store/img/wallpaper_special4.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Store/css/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Store/css/category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Store/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Store/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/favorites.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Store/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Store/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +28,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -37,90 +35,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2eJlCdfS8yWW3S9CULfcFB3anHn" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2iVvCAEPbr4qmtJZTXE8r7uM5za" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.grand_store.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/salpodnag/Documents/PycharmProjects/Grand-store/manage.py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.tests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/matvey/Documents/PycharmProjects/Grand-store/venv/bin/python",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="grand_store" type="PythonConfigurationType" factoryName="Python">
-      <module name="Grand-store" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.10 (Grand-store)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="runserver" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7362995-f187-48f5-a46b-7b466d9db167" name="Changes" comment="" />
-      <created>1711630442928</created>
+      <changelist id="81491f38-26f5-452f-bce0-4bc8cc15dd7a" name="Changes" comment="" />
+      <created>1719588430566</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711630442928</updated>
+      <updated>1719588430566</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Store/views.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Store/views.py</url>
-          <line>80</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

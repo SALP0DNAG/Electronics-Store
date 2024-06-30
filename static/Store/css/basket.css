@@ -58,8 +58,9 @@ h1 {
     text-align: center;
 }
 
-.product-quantity {
+.available-in-stock {
     display: flex;
+    justify-content: space-between;
     gap: 15px;
     align-items: center;
     border: 1px solid #ededed;
@@ -129,4 +130,16 @@ form {
 
 .finally-price {
     font-size: 32px;
+}
+
+.out-of-stock {
+    margin-top: 5px;
+    color: #EB1B1B;
+}
+
+.product-quantity-block {
+    padding: 10px;
+    width: 10px;
+    text-align: center;
+    color: #EB1B1B;
 }

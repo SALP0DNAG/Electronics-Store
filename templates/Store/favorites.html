@@ -1,7 +1,12 @@
 {% extends 'Store/base.html' %}
 {% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/favorites.css' %}">
+{% endblock styles %}
+
 {% block title %}Избранное{% endblock title%}
 
 {% block content %}
-    Избранное
+    <h1>Избранное</h1>
 {% endblock content%}

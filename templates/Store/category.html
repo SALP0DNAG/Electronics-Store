@@ -17,15 +17,18 @@
         {% endif %}
     </div>
     <h1>{{category_name}}</h1>
-    <form method="post" action="{% url 'store:category' category_name %}">
+    <form method="post" {% if category_name == 'Все категории' %}
+                            action="{% url 'store:category_all' %}"
+                        {% else %}
+                            action="{% url 'store:category' category_name %}"
+                        {% endif %}>
         {% csrf_token %}
         {{ sort_form.as_div }}
-        <input type="submit">
     </form>
     <div class="special-line-card-and-hidden-block">
         {% for product in products %}
             <div class="special-line-card">
-                <a href="#">
+                <a href="{% url 'store:product' category_name product.id %}">
                     <img src="/media/{{ product.image }}" class="special-line-card-image" alt="">
                     <div class="special-line-card-title">
                         {{ product.name }}
@@ -34,9 +37,15 @@
                         {{ product.price }} руб
                     </div>
                     <div class="hidden-block">
-                        <a href="{% url 'store:basket_add' product.id %}">
-                            <div class="add-item-in-basket">В корзину</div>
-                        </a>
+                        {% if product.quantity %}
+                            <a href="{% url 'store:basket_add' product.id %}">
+                                <div class="add-item-in-basket">В корзину</div>
+                            </a>
+                        {% else %}
+                            <div class="out-of-stock">
+                                Нет в наличии
+                            </div>
+                        {% endif %}
                         <a href="">
                             <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
                         </a>

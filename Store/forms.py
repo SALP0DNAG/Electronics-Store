@@ -8,5 +8,9 @@ class PromocodeForm(forms.Form):
 
 
 class SortForm(forms.Form):
-    CHOICES = (('Option 1', 'Сортировка'), ('Option 2', 'Option 2'),)
-    sort_by = forms.CharField(widget=forms.Select(choices=CHOICES, attrs={'onchange': 'this.form.submit();'}))
+    sort_by = forms.ChoiceField(
+        choices=[('default', 'Сортировка'), ('price_increase', 'По возрастанию цены'),
+                 ('price_drop', 'По убыванию цены')],
+        label=False,
+        widget=forms.Select(attrs={'onchange': 'this.form.submit();', 'class': 'sort_form'})
+    )

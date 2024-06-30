@@ -14,14 +14,25 @@
                 <div class="product">
                     <div class="product-left">
                         <img src="/media/{{ basket.product.image }}" alt="">
-                        <a href="#">{{basket.product.name}}</a>
+                        <a href="{% url 'store:product' basket.product.category.name basket.product.id %}">{{basket.product.name}}</a>
                     </div>
                     <div class="product-right">
                         <div class="product-price">{{basket.product.price}} руб/шт</div>
                         <div class="product-quantity">
-                            <a href="{% url 'store:basket_minus' basket.id%}" class="product-quantity-change">-</a>
-                            {{basket.quantity}}
-                            <a href="{% url 'store:basket_add' basket.product.id%}" class="product-quantity-change">+</a>
+                            <div class="available-in-stock">
+                                <a href="{% url 'store:basket_minus' basket.id%}" class="product-quantity-change">-</a>
+                                {{basket.quantity}}
+                                {% if basket.quantity != basket.product.quantity %}
+                                    <a href="{% url 'store:basket_add' basket.product.id%}" class="product-quantity-change">+</a>
+                                {% else %}
+                                    <div class="product-quantity-block">+</div>
+                                {% endif %}
+                            </div>
+                            {% if basket.quantity == basket.product.quantity %}
+                                <div class="out-of-stock">
+                                    в наличии {{basket.product.quantity}} штук
+                                </div>
+                            {% endif %}
                         </div>
                         <div class="product-sum">{{basket.sum}} руб</div>
                         <a href="{% url 'store:basket_delete' basket.id %}"><img src="{% static 'Store/img/cross.png'%}" alt=""></a>

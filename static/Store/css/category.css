@@ -1,5 +1,5 @@
 h1 {
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px;
     text-align: center;
 }
 
@@ -105,4 +105,24 @@ h1 {
 	border: 1px solid #ededed;
 	border-radius: 3px 3px 0 0;
 	border-bottom: none;
+}
+
+.sort_form {
+    margin-bottom: 20px;
+    border: 1px solid #ededed;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    background: #FFFFFF;
+    padding: 4px 32px 4px 8px;
+    font-size: 14px;
+}
+
+select:active, select:focus{
+  outline:none
+}
+
+.out-of-stock {
+    color: #999999;
+    padding: 11px 5px;
+    background-color: #E0E0E0;
 }

@@ -1,0 +1,67 @@
+{% extends 'Store/base.html' %}
+{% load static %}
+{% load store_tags %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/product.css' %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="path">
+        <a href="{% url 'store:index' %}">Главная</a>
+        <div class="separator">-</div>
+        <a href="{% url 'store:category' category_name %}">{{ category_name }}</a>
+        <div class="separator">-</div>
+        <a href="{% url 'store:product' category_name product.id %}">{{ product.name }}</a>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="/media/{{ product.image }}" alt="">
+        </div>
+        <div class="product-info">
+            <div class="product-info-title">
+                {{ product.name }}
+            </div>
+            <div class="product-description">
+                {{ product.description|desc_beginning:250 }}
+            </div>
+            <div class="availability">
+                Наличие:
+                {% if product.quantity > 0%}
+                    <span class="availability-yes">В наличии {{ product.quantity }} штук</span>
+                {% else %}
+                    <span class="availability-no">Нет в наличии</span>
+                {% endif %}
+            </div>
+            <div class="product-price">
+                {{ product.price }} руб
+            </div>
+            <div class="product-move">
+                {% if product.quantity > 0 %}
+                    <a href="{% url 'store:basket_add' product.id %}">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                {% else %}
+                    <div class="out-of-stock">
+                        Нет в наличии
+                    </div>
+                {% endif %}
+                <a href="">
+                    <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                </a>
+                <a href="">
+                    <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <div class="description-title">
+            Описание
+        </div>
+        <div class="description-body">
+            {{ product.description }}
+        </div>
+    </div>
+{% endblock content %}
+

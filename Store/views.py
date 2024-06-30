@@ -80,10 +80,16 @@ def basket_delete(request, basket_id):
 
 def category(request, category_name):
     sort_form = forms.SortForm()
-    category = models.ProductCategory.objects.get(name=category_name)
-    products = models.Product.objects.filter(category=category.id)
+    category_obj = models.ProductCategory.objects.get(name=category_name)
+    products = models.Product.objects.filter(category=category_obj.id)
+    if request.method == 'POST':
+        sort_form = forms.SortForm(request.POST)
+        if request.POST['sort_by'] == 'price_increase':
+            products = models.Product.objects.filter(category=category_obj.id).order_by('price')
+        elif request.POST['sort_by'] == 'price_drop':
+            products = models.Product.objects.filter(category=category_obj.id).order_by('-price')
     context = {
-        'category_name': category.name,
+        'category_name': category_obj.name,
         'products': products,
         'sort_form': sort_form,
     }
@@ -93,9 +99,24 @@ def category(request, category_name):
 def category_all(request):
     products = models.Product.objects.all()
     form = forms.SortForm()
+    if request.method == 'POST':
+        form = forms.SortForm(request.POST)
+        if request.POST['sort_by'] == 'price_increase':
+            products = models.Product.objects.all().order_by('price')
+        elif request.POST['sort_by'] == 'price_drop':
+            products = models.Product.objects.all().order_by('-price')
     context = {
         'category_name': 'Все категории',
         'products': products,
         'sort_form': form
     }
     return render(request, 'Store/category.html', context=context)
+
+
+def product(request, category_name, product_id):
+    product = models.Product.objects.get(id=product_id)
+    context = {
+        'product': product,
+        'category_name': category_name
+    }
+    return render(request, 'Store/product.html', context=context)

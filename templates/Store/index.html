@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="banner-desktop-button">
-                <a href="">Все товары</a>
+                <a href="{% url 'store:category_all' %}">Все товары</a>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
 {% for special_product in special_products %}
     <div class="special-line">
         <div class="special-line-main-image">
-            <a href="">
+            <a href="{% url 'store:category' special_product.category.name %}">
                 <img src="/media/{{ special_product.image }}" alt="">
                 <div class="special-line-main-image-caption">Посмотреть все</div>
             </a>
@@ -54,7 +54,7 @@
             {% if product.category == special_product.category %}
                 <div class="special-line-card-and-hidden">
                     <div class="special-line-card">
-                        <a href="">
+                        <a href="{% url 'store:product' product.category.name product.id %}">
                             <img src="/media/{{ product.image }}" class="special-line-card-image" alt="">
                             <div class="special-line-card-title">
                                 {{ product.name }}
@@ -63,9 +63,15 @@
                                 {{ product.price }} руб
                             </div>
                             <div class="hidden-block">
-                                <a href="{% url 'store:basket_add' product.id %}">
-                                    <div class="add-item-in-basket">В корзину</div>
-                                </a>
+                                {% if product.quantity > 0 %}
+                                    <a href="{% url 'store:basket_add' product.id %}">
+                                        <div class="add-item-in-basket">В корзину</div>
+                                    </a>
+                                {% else %}
+                                    <div class="out-of-stock">
+                                        Нет в наличии
+                                    </div>
+                                {% endif %}
                                 <a href="">
                                     <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
                                 </a>
