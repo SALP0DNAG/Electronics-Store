@@ -1,0 +1,257 @@
+.main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info, .products {
+    width: 48%;
+    height: 100%;
+}
+
+
+.info-title {
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+.info-name {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.info-phone, .info-email {
+    font-weight: normal;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.info-edit-profile{
+    display: block;
+    width: 23%;
+    text-align:center;
+    margin-top: 20px;
+    border: none;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #ffda33;
+    padding: 10px 5px;
+    color: #333333;
+}
+
+.info-delivery, .info-recipient-title, .info-payment-method{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+form input, textarea{
+    font-family: 'PT Root UI', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid black;
+}
+
+form input:focus, textarea:focus {
+    transition: 0.05s;
+    outline: 3px solid rgba(139, 139, 139, 0.1);
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}
+
+form {
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+form span {
+    color: red;
+}
+
+.info-delivery-type {
+    margin-top: 50px;
+    font-size: 16px;
+    color: #747474;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + div[class="info-delivery-type-desc"] {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+}
+
+input[type="radio"] + div[class="info-delivery-type-desc"]::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffda33;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + div[class="info-delivery-type-desc"]::before {
+    background: #ffda33;
+}
+
+.info-delivery-type-desc-title {
+    color: #333333;
+    font-size: 20px;
+}
+
+.info-delivery-type-desc-title {
+    margin-bottom: 9px;
+}
+
+.info-address-label {
+    display: none;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.info-delivery-type-price {
+    text-align: right;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.info-comment-label, .info-recipient-name, .info-recipient-number, .info-address-label{
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.info-address-input {
+    display: none;
+}
+
+.info-number-example {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input[type="radio"] + div[class="pay_method"] {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+}
+
+input[type="radio"] + div[class="pay_method"]::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffda33;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + div[class="pay_method"]::before {
+    background: #ffda33;
+}
+
+.pay_method_select {
+    font-size: 20px;
+    margin-top: 30px;
+    display: block;
+}
+
+.button-save {
+    margin-top: 50px;
+}
+
+.button-save input{
+    border: none;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #ffda33;
+    padding: 20px 20px;
+}
+
+.info {
+    padding-right: 2%;
+    box-shadow: 2px 0px 0px 0px rgba(233, 233, 233, 0.7);
+}
+
+.products {
+    padding-left: 2%;
+}
+
+.products img {
+    height: 56px;
+	width: 42px;
+}
+
+.products a {
+    text-decoration: none;
+    color: black;
+}
+
+.product {
+    margin: 50px 0px 50px 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.intermediate-price {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding: 25px 0;
+}
+
+.price-products, .price-delivery {
+    display: flex;
+    justify-content: space-between;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.price-delivery {
+    margin-top: 15px;
+}
+
+.price-delivery-number, .price-products-number {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.finally-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.finally-price-label {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.finally-price-number {
+    font-weight: bold;
+    color: black;
+    font-size: 26px;
+}

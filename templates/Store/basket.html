@@ -59,9 +59,9 @@
                     <div class="caption-total">Итого:</div>
                     <div class="finally-price">{{ total_sum }} руб</div>
                 </div>
-                <div class="button-apply-order">
-                    <input type="submit" style="width: 100%" value="Оформить заказ" name="order">
-                </div>
+                <a class="button-apply-order" href="{% url 'orders:new_order' %}">
+                    Оформить заказ
+                </a>
             </div>
         </div>
     {% else %}

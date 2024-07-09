@@ -1,0 +1,43 @@
+table {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+thead tr th{
+    font-weight: normal;
+    color: #9e9e9e;
+    height: 30px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+td a {
+    color: #9e9e9e;
+    text-decoration: underline;
+}
+
+table th:last-child, td:last-child {
+    text-align: right;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tfoot td {
+    height: 30px;
+    text-align: right;
+}
+
+tfoot td span {
+    font-weight: bold;
+}

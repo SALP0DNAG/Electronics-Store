@@ -1,0 +1,63 @@
+{% extends 'Store/base.html' %}
+{% load static store_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'orders/css/order.css' %}">
+{% endblock styles %}
+
+{% block title %}Заказ № {{order.id}}{% endblock title %}
+{% block content %}
+    <div class="order-number">Заказ № {{order.id}}</div>
+    <div class="order-label">Информация о заказе</div>
+    <div class="order-content">
+        <div class="order-content-label">Дата оформления</div>
+        <div class="order-content-data">{{order.created_at}}</div>
+        <div class="order-content-label">Сумма и статус</div>
+        <div class="order-content-data"><span class="sum">{{order_cost}} руб</span><span class="status">{{status}}</span></div>
+        <div class="order-content-label">Способ оплаты</div>
+        <div class="order-content-data">{{payment_method}}</div>
+        <div class="order-content-label">Способ доставки</div>
+        <div class="order-content-data">{{delivery_method}}</div>
+        <div class="order-content-label">Адрес доставки</div>
+        <div class="order-content-data">{{order.address}}</div>
+        <div class="order-content-label">Получатель</div>
+        <div class="order-content-data">{{order.recipient}}</div>
+        <div class="order-content-label">Email</div>
+        <div class="order-content-data">{{order.user.email}}</div>
+        <div class="order-content-label">Комментарии к заказу</div>
+        <div class="order-content-data">{{order.comment}}</div>
+    </div>
+    <div class="order-composition">
+        <div class="order-composition-title">Состав заказа</div>
+        <table>
+        <thead>
+            <tr>
+                <th>Наименование</th>
+                <th>Кол-во</th>
+                <th>Стоимость</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in items %}
+                <tr>
+                    <td>{{item.product.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.product.price}} руб</td>
+                </tr>
+            {% endfor%}
+            {% if order.delivery_method == 'courier' %}
+                <tr>
+                    <td>Доставка</td>
+                    <td></td>
+                    <td>300 руб</td>
+                </tr>
+            {% endif %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Итого: <span>{{order_cost}} руб</span></td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+{% endblock content%}

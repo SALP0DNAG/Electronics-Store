@@ -1,0 +1,110 @@
+{% extends 'Store/base.html' %}
+{% load static store_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'orders/css/new_order.css' %}">
+{% endblock styles %}
+
+{% block title %}Оформление заказа{% endblock title %}
+{% block content %}
+<div class="main">
+    <div class="info">
+        <div class="info-title">Оформление заказа</div>
+        <div class="info-name">Вы авторизовались как {{ user.username }}</div>
+        <div class="info-phone">{{ user.phone_number }}</div>
+        <div class="info-email">{{ user.email }}</div>
+        <a class="info-edit-profile" href="{% url 'users:contacts' %}">Редактировать</a>
+        <div class="info-delivery">Доставка</div>
+        <form action="{% url 'orders:new_order' %}" method="post">
+            {% csrf_token %}
+            <div class="info-city-label">Наслённый пункт <span>*</span></div>
+            <input name="city" type="text" class="info-city-input" value="{{ user.city }}">
+            <label class="info-delivery-type">
+                <input checked type="radio" name="delivery_method" value="pickup" onclick="hideAddress()">
+                <div class="info-delivery-type-desc">
+                    <div class="info-delivery-type-desc-title">Самовывоз</div>
+                    <div class="info-delivery-type-desc-text">На пункте выдачи</div>
+                </div>
+                <div class="info-delivery-type-price">+ 0 руб</div>
+            </label>
+            <label class="info-delivery-type">
+                <input type="radio" name="delivery_method" value="courier"
+                       onclick="showAddress()">
+                <div class="info-delivery-type-desc">
+                    <div class="info-delivery-type-desc-title">Курьером</div>
+                    <div class="info-delivery-type-text">Доставка курьером</div>
+                </div>
+                <div class="info-delivery-type-price">+ 300 руб</div>
+            </label>
+            <div id="address" class="info-address-label">Адрес</div>
+            <textarea name="address" class="info-address-input" rows="4">{{ user.address }}</textarea>
+            <div id="comment" class="info-comment-label">Комментарии к заказу</div>
+            <textarea name="comment" class="info-comment-input" rows="4"></textarea>
+            <div class="info-recipient-title">Получатель</div>
+            <div class="info-recipient-name">Контактное лицо (ФИО) <span>*</span></div>
+            <input name="full_name" type="text" class="info-recipient-input" value="{{ user.username }}">
+            <div class="info-recipient-number">Контактный телефон <span>*</span></div>
+            <input name="number" type="text" class="info-number-input" value="{{ user.phone_number }}">
+            <div class="info-number-example">Например: +7(926)111-11-11</div>
+            <div class="info-payment-method">Способ оплаты <span>*</span></div>
+            <label class="pay_method_select">
+                <input type="radio" checked name="pay_method" value="cash">
+                <div class="pay_method">Наличными</div>
+            </label>
+            <label class="pay_method_select">
+                <input type="radio" name="pay_method" value="card">
+                <div class="pay_method">Карта</div>
+            </label>
+            <div class="button-save">
+                <input type="submit" value="Подтвердить заказ">
+            </div>
+        </form>
+    </div>
+    <div class="products">
+        {% for basket in baskets %}
+            <div class="product">
+                <img src="/media/{{ basket.product.image }}" alt="">
+                <a href="{% url 'store:product' basket.product.category.name basket.product.id %}">{{basket.product.name}}</a>
+                <div class="price">{{basket.quantity}} x <span>{{basket.product.price}} руб</span></div>
+            </div>
+        {% endfor %}
+        <div class="intermediate-price">
+            <div class="price-products">
+                <div class="price-products-label">Сумма по товарам</div>
+                <div class="price-products-number">{{total_sum}} руб</div>
+            </div>
+            <div class="price-delivery">
+                <div class="price-delivery-label">Стоимость доставки</div>
+                <div class="price-delivery-number">0 руб</div>
+            </div>
+        </div>
+        <div class="finally-price">
+            <div class="finally-price-label">Итого:</div>
+            <div class="finally-price-number">{{total_sum}} руб</div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    var orderPrice = parseInt(document.querySelector('.finally-price-number').textContent.replace(' руб', ''), 10);
+
+    function showAddress() {
+        var contents = document.querySelectorAll('.info-address-input, .info-address-label');
+        contents.forEach(function(content) {
+            content.style.display = 'block';
+        });
+        document.querySelector('.price-delivery-number').textContent = '300 руб';
+        document.querySelector('.finally-price-number').textContent = (orderPrice + 300) + ' руб';
+    }
+
+    function hideAddress() {
+        var contents = document.querySelectorAll('.info-address-label, .info-address-input');
+        contents.forEach(function(content) {
+            content.style.display = 'none';
+        });
+        document.querySelector('.price-delivery-number').textContent = '0 руб';
+        document.querySelector('.finally-price-number').textContent = (orderPrice) + ' руб';
+    }
+</script>
+{% endblock content%}

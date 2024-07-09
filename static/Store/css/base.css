@@ -202,7 +202,6 @@ footer {
 
 .footer-menu-telephone {
 	margin-top: 15px;
-	padding: 5px;
 }
 
 .footer-menu-telephone a:first-child {
@@ -214,14 +213,14 @@ footer {
 	padding-left: 10px;
 	font-weight: normal;
 	color: white;
-	font-size: 18px;
+	font-size: 17px;
 }
 
 .footer-menu-address {
 	padding-top: 10px;
 	font-weight: normal;
 	color: white;
-	font-size: 18px;
+	font-size: 17px;
 }
 
 main {

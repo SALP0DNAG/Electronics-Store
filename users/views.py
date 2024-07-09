@@ -2,10 +2,14 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import auth, messages
 from . import forms, models
+from orders import models as orders_models
 
 
 def orders(request):
-    return render(request, 'users/orders.html')
+    context = {
+        'orders': orders_models.Order.objects.filter(user=request.user),
+    }
+    return render(request, 'users/orders.html', context=context)
 
 
 def address(request):

@@ -74,3 +74,4 @@ class Basket(models.Model):
 class Favorite(models.Model):
     user = models.ForeignKey(md.User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+

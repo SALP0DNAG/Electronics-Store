@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Store.apps.StoreConfig',
     'page.apps.PageConfig',
     'users.apps.UsersConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             'libraries': {
-                'store_tags': 'Store.templatestags.store_tags'
+                'store_tags': 'Store.templatestags.store_tags',
+                'orders_tags': 'orders.templatestags.orders_tags'
             }
         },
     },

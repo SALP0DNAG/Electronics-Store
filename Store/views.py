@@ -32,10 +32,6 @@ def favorites(request):
 
 @login_required
 def basket(request):
-    if request.method == 'POST':
-        promocode_form = forms.PromocodeForm(request.POST)
-        if promocode_form.is_valid():
-            pass
     promocode_form = forms.PromocodeForm()
     baskets = models.Basket.objects.filter(user=request.user)
     total_sum = sum(basket.sum() for basket in baskets)
