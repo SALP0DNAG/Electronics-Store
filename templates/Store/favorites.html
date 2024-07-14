@@ -1,12 +1,68 @@
 {% extends 'Store/base.html' %}
-{% load static %}
+{% load static store_tags %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'Store/css/favorites.css' %}">
+<link rel="stylesheet" href="{% static 'Store/css/favorites.css' %}">
 {% endblock styles %}
 
 {% block title %}Избранное{% endblock title%}
 
 {% block content %}
-    <h1>Избранное</h1>
+<h1>Избранное</h1>
+{% if favorites %}
+    <form method="post" action="{% url 'store:favorites' %}">
+        {% csrf_token %}
+        {{ sort_form.as_div }}
+    </form>
+    {% for product in favorites %}
+    <div class="product">
+        <div class="product-info">
+            <img src="/media/{{ product.product.image }}" class="product-info-img" alt="">
+            <div class="product-name-and-desc">
+                <a href="{% url 'store:product' product.product.category.name product.product.id %} " class="product-name">{{ product.product.name }}</a>
+                <div class="product-desc">{{ product.product.description|desc_beginning:500 }}</div>
+            </div>
+        </div>
+        <div class="product-operation">
+            <div class="availability">
+                Наличие:
+                {% if product.product.quantity > 0%}
+                    <span class="availability-yes">В наличии {{ product.product.quantity }} штук</span>
+                {% else %}
+                    <span class="availability-no">Нет в наличии</span>
+                {% endif %}
+            </div>
+            <div class="product-price">
+                {{ product.product.price }} руб
+            </div>
+            <div class="product-move">
+                {% if product.product.quantity > 0 %}
+                    <a href="{% url 'store:basket_add' product.product.id %}">
+                        <div class="add-item-in-basket">В корзину</div>
+                    </a>
+                {% else %}
+                    <div class="out-of-stock">
+                        Нет в наличии
+                    </div>
+                {% endif %}
+                <a href="">
+                    <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
+                </a>
+                {% product_in_favorites request product.product as in_favorite %}
+                {% if in_favorite %}
+                    <a href="{% url 'store:favorites_delete' product.product.id %}">
+                        <img src="{% static 'Store/img/heart_selected.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                {% else %}
+                    <a href="{% url 'store:favorites_add' product.product.id %}">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <h2>Список избранного пуст </h2>
+{% endif %}
 {% endblock content%}

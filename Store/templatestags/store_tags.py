@@ -4,7 +4,7 @@ from Store import models
 register = template.Library()
 
 
-@register.simple_tag()
+@register.simple_tag
 def get_total_quantity(request):
     if request.user.is_anonymous:
         total_quantity = 0
@@ -12,6 +12,19 @@ def get_total_quantity(request):
         baskets = models.Basket.objects.filter(user=request.user)
         total_quantity = sum(basket.quantity for basket in baskets)
     return total_quantity
+
+
+@register.simple_tag
+def product_in_favorites(request, product):
+    if request.user.is_authenticated:
+        return models.Favorite.objects.filter(user=request.user, product=product).exists()
+    return False
+
+
+@register.simple_tag
+def favorites_exists(request):
+    return models.Favorite.objects.filter(user=request.user).exists()
+
 
 
 @register.filter

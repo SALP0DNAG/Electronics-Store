@@ -3,8 +3,10 @@ from django.urls import reverse
 from django.contrib import auth, messages
 from . import forms, models
 from orders import models as orders_models
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def orders(request):
     context = {
         'orders': orders_models.Order.objects.filter(user=request.user),
@@ -12,6 +14,7 @@ def orders(request):
     return render(request, 'users/orders.html', context=context)
 
 
+@login_required
 def address(request):
     if request.method == 'POST':
         form = forms.AddressForm(data=request.POST, instance=request.user)
@@ -23,10 +26,12 @@ def address(request):
     return render(request, 'users/address.html', context)
 
 
+@login_required
 def discounts_and_bonuses(request):
     return render(request, 'users/discounts-and-bonuses.html')
 
 
+@login_required
 def contacts(request):
     if request.method == 'POST':
         form = forms.ContactsForm(data=request.POST, instance=request.user)
@@ -76,6 +81,7 @@ def register(request):
     return render(request, 'users/register.html', context=context)
 
 
+@login_required
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('store:index'))

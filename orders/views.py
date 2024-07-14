@@ -2,9 +2,11 @@ from django.shortcuts import render
 from . import models as orders_models
 from Store import models as store_models
 from django.shortcuts import redirect
-from .models import Order, OrderItem
+from .models import Order
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 # Create your views here.
 def new_order(request):
     user = request.user
@@ -33,6 +35,7 @@ def new_order(request):
     return render(request, 'orders/new_order.html', context=context)
 
 
+@login_required
 def order(request, order_id):
     order = orders_models.Order.objects.get(id=order_id)
     items = order.items.all()

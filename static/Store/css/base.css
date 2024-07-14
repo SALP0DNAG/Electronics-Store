@@ -87,6 +87,10 @@ a {
 	width: 30px;
 }
 
+.favorites-active {
+    position: relative;
+}
+
 .favorites img{
 	margin-left: 30px;
 	height: 23px;
@@ -226,3 +230,18 @@ footer {
 main {
     flex-grow: 1;
 }
+
+.favorites-active {
+    background-color: #ffda33;
+    border-radius: 3px;
+}
+
+.favorites-active::after {
+    content: '';
+    position: absolute;
+    top: -5px; /* Позиция точки сверху */
+    left: 50px; /* Позиция точки слева */
+    width: 10px; /* Ширина точки */
+    height: 10px; /* Высота точки */
+    background-color: #ffda33; /* Цвет точки */
+    border-radius: 50%; /* Делает точку круглой */

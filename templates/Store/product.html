@@ -49,9 +49,16 @@
                 <a href="">
                     <img src="{% static 'Store/img/comparison.png' %}" style="width: 30px;height: 30px;" alt="">
                 </a>
-                <a href="">
-                    <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
-                </a>
+                {% product_in_favorites request product as in_favorite %}
+                {% if in_favorite %}
+                    <a href="{% url 'store:favorites_delete' product.id %}">
+                        <img src="{% static 'Store/img/heart_selected.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                {% else %}
+                    <a href="{% url 'store:favorites_add' product.id %}">
+                        <img src="{% static 'Store/img/heart.png' %}" style="width: 30px;height: 30px;" alt="">
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

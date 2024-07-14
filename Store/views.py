@@ -22,12 +22,43 @@ def index(request):
     return render(request, 'Store/index.html', context=context)
 
 
+@login_required
 def compares(request):
     return render(request, 'Store/compares.html')
 
 
+@login_required
 def favorites(request):
-    return render(request, 'Store/favorites.html')
+    products = models.Favorite.objects.filter(user=request.user)
+    if request.method == 'POST':
+        sort_form = forms.SortFormFavorites(request.POST)
+        if request.POST['sort_by'] == 'price_increase':
+            products = products.order_by('product__price')
+        elif request.POST['sort_by'] == 'price_drop':
+            products = products.order_by('-product__price')
+        elif request.POST['sort_by'] == 'data_addition':
+            products = products.order_by('-created_timestamp')
+    else:
+        sort_form = forms.SortFormFavorites()
+    context = {
+        'favorites': products,
+        'sort_form': sort_form,
+    }
+    return render(request, 'Store/favorites.html', context=context)
+
+
+@login_required
+def favorites_add(request, product_id):
+    product = models.Product.objects.get(id=product_id)
+    models.Favorite.objects.create(user=request.user, product=product)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def favorites_delete(request, product_id):
+    product = models.Product.objects.get(id=product_id)
+    models.Favorite.objects.get(product=product).delete()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
@@ -75,11 +106,11 @@ def basket_delete(request, basket_id):
 
 
 def category(request, category_name):
-    sort_form = forms.SortForm()
+    sort_form = forms.SortFormProducts()
     category_obj = models.ProductCategory.objects.get(name=category_name)
     products = models.Product.objects.filter(category=category_obj.id)
     if request.method == 'POST':
-        sort_form = forms.SortForm(request.POST)
+        sort_form = forms.SortFormProducts(request.POST)
         if request.POST['sort_by'] == 'price_increase':
             products = models.Product.objects.filter(category=category_obj.id).order_by('price')
         elif request.POST['sort_by'] == 'price_drop':

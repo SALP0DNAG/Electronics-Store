@@ -12,18 +12,19 @@
 
 {% block users_content %}
     {% if messages %}
-        {% for message in messages %}
-            {% if message.tags == 'error' %}
-                <div class="error">
-                    {{ message}}
-                </div>
-            {% else %}
-                <div class="success">
-                    {{ message}}
-                </div>
-            {% endif %}
-
-        {% endfor %}
+        <div class="message">
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                    <div class="error">
+                        {{ message}}
+                    </div>
+                {% else %}
+                    <div class="success">
+                        {{ message}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>      
     {% endif %}
     <div class="contact-info">
         <form action="{% url 'users:contacts' %}" method="post">

@@ -36,6 +36,10 @@
                     </a>
                 </div>
                 <div class="favorites">
+                    {% favorites_exists request as fv_ex %}
+                    {% if fv_ex %}
+                        <div class="favorites-active"></div>
+                    {% endif %}
                     <a href="{% url 'store:favorites' %}">
                         <img src="{% static 'Store/img/heart.png' %}" alt="">
                     </a>
