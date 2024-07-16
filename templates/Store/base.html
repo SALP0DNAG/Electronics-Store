@@ -25,7 +25,11 @@
                     </a>
                 </div>
                 <div class="search">
-                    <input type="text" placeholder="Поиск">
+                    <form method="get" action="{% url 'store:search' %}">
+<!--                        <input type="text" placeholder="Поиск">-->
+                        {{ search_form.as_p }}
+                        <input type="submit" value="">
+                    </form>
                     <a href="#">
                         <img src="{% static 'Store/img/magnifying_glass.svg' %}" alt="">
                     </a>

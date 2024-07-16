@@ -28,3 +28,7 @@ class SortFormFavorites(forms.Form):
         label=False,
         widget=forms.Select(attrs={'onchange': 'this.form.submit();', 'class': 'sort_form'})
     )
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField(max_length=100, label='', widget=forms.TextInput(attrs={'placeholder': 'Поиск'}))

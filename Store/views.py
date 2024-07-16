@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from . import models
 from . import forms
 
@@ -147,3 +148,15 @@ def product(request, category_name, product_id):
         'category_name': category_name
     }
     return render(request, 'Store/product.html', context=context)
+
+
+def search(request):
+    query = request.GET.get('query', '')
+    products = models.Product.objects.filter(name__icontains=query) if query else []
+    form = forms.SearchForm()
+    context = {
+        'form': form,
+        'products': products,
+        'query': query
+    }
+    return render(request, 'Store/search.html', context=context)

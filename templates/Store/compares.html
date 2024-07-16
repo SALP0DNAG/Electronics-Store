@@ -1,7 +1,12 @@
 {% extends 'Store/base.html' %}
-{% load static %}
+{% load static store_tags %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'Store/css/compares.css' %}">
+{% endblock styles %}
 
 {% block title %}Сравнение{% endblock title %}
+
 {% block content %}
-    Сравнение
+<h1>Сравнение</h1>
 {% endblock content%}

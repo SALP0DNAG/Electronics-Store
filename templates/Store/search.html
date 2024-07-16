@@ -1,0 +1,22 @@
+{% extends 'Store/base.html' %}
+{% load static store_tags %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Store/css/search.css' %}">
+{% endblock styles%}
+{% block title %} Поиск {% endblock title %}
+{% block content%}
+    <form method="get" action="{% url 'store:search' %}">
+        {{ form.as_p }}
+        <button type="submit">Поиск</button>
+    </form>
+
+    <h2>Результаты поиска для "{{ query }}":</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }}</li>
+        {% empty %}
+            <li>Нет результатов</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

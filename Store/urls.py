@@ -8,6 +8,7 @@ urlpatterns = [
     path('all_categories/', views.category_all, name='category_all'),
     path('compares/', views.compares, name='compares'),
     path('basket/', views.basket, name='basket'),
+    path('search/', views.search, name='search'),
     path('favorites/', views.favorites, name='favorites'),
     path('favorites_add/<int:product_id>', views.favorites_add, name='favorites_add'),
     path('favorites_delete/<int:product_id>', views.favorites_delete, name='favorites_delete'),
